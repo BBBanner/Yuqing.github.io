@@ -1,0 +1,252 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>SOS Lapsikylä</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/dropdown.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap" rel="stylesheet">
+		
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<style>
+			#custom-navbar {
+			font-family: monospace !important;
+		  }
+
+		  /* 覆盖main.css中的carousel-img样式 */
+  #carousel .carousel-img {
+	opacity: 1 !important;
+	position: absolute !important;
+	left: 0 !important;
+	top: 0 !important;
+	width: 100% !important;
+	height: 100% !important;
+	object-fit: contain !important;
+	transition: opacity 0.3s ease !important;
+	z-index: 1 !important;
+	border-radius: 0 !important;
+	display: none !important; /* 默认隐藏所有图片 */
+  }
+  
+  #carousel .carousel-img.active {
+	display: block !important; /* 只显示当前活跃的图片 */
+  }
+  
+  /* 确保轮播容器有正确的样式 */
+  #carousel {
+	width: 100vw !important; /* 占满全屏宽度 */
+	margin: 0 !important;
+	  left: 0 !important;
+	 right: 0 !important;
+	 padding: 0 !important;
+	height: 60vh !important;
+	border: none !important;
+	position: relative !important;
+	background: #FBFAF8 !important;
+  }
+
+  /* 内容容器样式 */
+  .content-container {
+	width: 100% !important;
+	max-width: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+  }
+
+  .carousel-section {
+	width: 100% !important;
+	max-width: none !important;
+	border-bottom: 2px solid #d3d1cd;
+  }
+
+  .text-section {
+	padding-left: 100px !important;
+	padding-right: 100px !important;
+  }
+
+  /* 轮播控制按钮样式 */
+  .carousel-controls {
+	width: 100vw !important;
+	max-width: 100vw !important;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto 0 auto;
+	padding-left: 100px;
+	padding-right: 100px;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	position: relative;
+	border-top: 2px solid #d3d1cd;
+  }
+
+  /* 箭头 */
+  #prev-arrow, #next-arrow {
+	z-index: 10 !important;
+	border-radius: 0 !important;
+	width: 24px !important;
+	height: 24px !important;
+	display: flex !important;
+	right: 20px !important;
+	bottom: 20px !important;
+	cursor: pointer !important;
+	transition: all 0.3s ease !important;
+  }
+  
+  #prev-arrow:hover, #next-arrow:hover {
+	transform: scale(1.1) !important;
+  }
+
+
+		</style>
+	</head>
+
+	<body class="is-preload">
+		<div id="custom-navbar" style="width:100vw;position:fixed;top:0;left:0;z-index:999;display:flex;justify-content:flex-end;align-items:center;padding:0 32px 0 24px;height:48px;box-sizing:border-box;font-family:monospace;font-size:18px;border-bottom: 2px solid #d3d1cd;">
+			<!--
+			<div style="display:flex;gap:32px;align-items:center;">
+			  <div class="dropdown" style="position:relative;">
+				<span style="cursor:pointer;"><span class="dropdown-arrow">&#x203A;</span> TOPIC</span>
+				<ul class="dropdown-list" style="position:absolute;left:0;top:120%;background:#FBFAF8;list-style:none;padding:8px 0;margin:0;min-width:120px;">
+				  <li style="padding:6px 24px;cursor:pointer;">1</li>
+				  <li style="padding:6px 24px;cursor:pointer;">2</li>
+				  <li style="padding:6px 24px;cursor:pointer;">3</li>
+				</ul>
+			  </div>
+			  <div class="dropdown" style="position:relative;">
+				<span style="cursor:pointer;"><span class="dropdown-arrow">&#x203A;</span> APPROACH</span>
+				<ul class="dropdown-list" style="position:absolute;left:0;top:120%;background:#FBFAF8;list-style:none;padding:8px 0;margin:0;min-width:120px;">
+				  <li style="padding:6px 24px;cursor:pointer;">1</li>
+				  <li style="padding:6px 24px;cursor:pointer;">2</li>
+				  <li style="padding:6px 24px;cursor:pointer;">3</li>
+				</ul>
+			  </div>
+			</div>
+			-->
+			<div style="display:flex;gap:16px;align-items:center;">
+			  <a href="myindex.html" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;">
+				<img src="images/homepage.svg" alt="Home" style="width:24px;height:24px;">
+			  </a>
+			</div>
+		  </div>
+							<div class="content-container">
+								<!-- 图片轮播区域 -->
+								<div class="carousel-section">
+									<div id="carousel">
+										<img class="carousel-img" src="images/SOS/1.png" />
+										<img class="carousel-img" src="images/SOS/2.png" />
+										<img class="carousel-img" src="images/SOS/3.png" />
+										<img class="carousel-img" src="images/SOS/4.png" />
+										<img class="carousel-img" src="images/SOS/5.png" />
+										<img class="carousel-img" src="images/SOS/6.png" />
+										<img class="carousel-img" src="images/SOS/7.png" />
+										<img class="carousel-img" src="images/SOS/8.png" />
+										<img class="carousel-img" src="images/SOS/9.png" />
+										<img class="carousel-img" src="images/SOS/10.png" />
+										<img class="carousel-img" src="images/SOS/11.png" />
+										<img class="carousel-img" src="images/SOS/12.png" />
+										<img class="carousel-img" src="images/SOS/13.png" />
+										<img class="carousel-img" src="images/SOS/14.png" />
+										<img class="carousel-img" src="images/SOS/15.png" />
+										<img class="carousel-img" src="images/SOS/16.png" />
+										<img class="carousel-img" src="images/SOS/17.png" />
+										<img class="carousel-img" src="images/SOS/18.png" />
+										<img class="carousel-img" src="images/SOS/19.png" />
+										<img class="carousel-img" src="images/SOS/20.png" />
+										<img class="carousel-img" src="images/SOS/21.png" />
+										<img class="carousel-img" src="images/SOS/22.png" />
+										<img class="carousel-img" src="images/SOS/23.png" />
+										<img class="carousel-img" src="images/SOS/24.png" />
+										<img class="carousel-img" src="images/SOS/25.png" />
+										<img class="carousel-img" src="images/SOS/26.png" />
+										<img class="carousel-img" src="images/SOS/27.png" />
+									</div>
+									<!-- 轮播控制按钮 -->
+									<div class="carousel-controls">
+										<span id="prev-arrow">
+											<img src="images/arrow-prev.svg" alt="上一页" ;">
+										</span>
+										<span id="next-arrow">
+											<img src="images/arrow-next.svg" alt="下一页" ;">
+										</span>
+									</div>
+								</div>
+								
+								<!-- 文字介绍区域 -->
+								<div class="text-section" >
+									<h1 style="font-size: 2em; margin-top: 1em; margin-bottom: 0.5em;">Help SOS Children's Villages integrate children's rights into corporate ESG.</h1>
+									<p style="font-size: 1em; color: #444; line-height: 1.6;">
+										This project is from my MA course, Capstone in creative sustainability at Aalto University in which I had the opportunity to research and design a strategy for SOS Children's Villages Finland (SOS Lapsikylä) to develop partnership with companies under the background of the Directive on Corporate Sustainability Reporting (CSRD) and the European Sustainability Reporting Standards(ESRS).
+									</p>
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer" >
+					<div class="inner">
+						<ul class="copyright">
+							<li>&copy; All rights reserved</li><li>Wang Yuqing 2025</a></li>
+						</ul>
+					</div>
+				</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/dropdown.js"></script>
+			<script>
+				// 轮播功能
+				const imgs = document.querySelectorAll('.carousel-img');
+				const nextArrow = document.getElementById('next-arrow');
+				const prevArrow = document.getElementById('prev-arrow');
+				let current = 0;
+			  
+				// 初始化：只显示第一张图片
+				function showImage(index) {
+					// 隐藏所有图片
+					imgs.forEach(img => {
+						img.classList.remove('active');
+					});
+					// 显示当前图片
+					imgs[index].classList.add('active');
+				}
+			  
+				nextArrow.addEventListener('click', function() {
+					current = (current + 1) % imgs.length;
+					showImage(current);
+				});
+			  
+				prevArrow.addEventListener('click', function() {
+					current = (current - 1 + imgs.length) % imgs.length;
+					showImage(current);
+				});
+			  
+				// 初始化显示第一张图片
+				showImage(0);
+				// 添加键盘支持
+				document.addEventListener('keydown', function(e) {
+						if (e.key === 'ArrowRight') {
+							e.preventDefault();
+							nextArrow.click();
+						}
+						if (e.key === 'ArrowLeft') {
+							e.preventDefault();
+							prevArrow.click();
+						}
+					});	
+			</script>
+
+	</body>
+</html>

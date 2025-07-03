@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>UTU</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/dropdown.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap" rel="stylesheet">
+		
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/3/turn.min.js"></script>
+		<style>
+			#flipbook-container {
+				margin: 0 auto;
+				width: 1200px;
+				height: 500px;
+				position: relative;
+			}
+			
+			#flipbook {
+				width: 100%;
+				height: 100%;
+			}
+			
+			.page {
+				background-color: white;
+				overflow: hidden;
+			}
+			
+			.page img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+	
+			.nav-buttons {
+				text-align: center;
+				margin: 20px 0;
+			}
+	
+			.nav-buttons button {
+				margin: 0 10px;
+				padding: 10px 20px;
+			}
+		</style>
+	</head>
+
+	<body class="is-preload">
+		<div id="custom-navbar" style="width:100vw;position:fixed;top:0;left:0;z-index:999;display:flex;justify-content:flex-end;align-items:center;padding:0 32px 0 24px;height:48px;box-sizing:border-box;font-family:monospace;font-size:18px; border-bottom: 2px solid #d3d1cd;">
+			<!--
+			<div style="display:flex;gap:32px;align-items:center;">
+			  <div class="dropdown" style="position:relative;">
+				<span style="cursor:pointer;"><span class="dropdown-arrow">&#x203A;</span> TOPIC</span>
+				<ul class="dropdown-list" style="position:absolute;left:0;top:120%;background:#FBFAF8;list-style:none;padding:8px 0;margin:0;min-width:120px;">
+				  <li style="padding:6px 24px;cursor:pointer;">1</li>
+				  <li style="padding:6px 24px;cursor:pointer;">2</li>
+				  <li style="padding:6px 24px;cursor:pointer;">3</li>
+				</ul>
+			  </div>
+			  <div class="dropdown" style="position:relative;">
+				<span style="cursor:pointer;"><span class="dropdown-arrow">&#x203A;</span> APPROACH</span>
+				<ul class="dropdown-list" style="position:absolute;left:0;top:120%;background:#FBFAF8;list-style:none;padding:8px 0;margin:0;min-width:120px;">
+				  <li style="padding:6px 24px;cursor:pointer;">1</li>
+				  <li style="padding:6px 24px;cursor:pointer;">2</li>
+				  <li style="padding:6px 24px;cursor:pointer;">3</li>
+				</ul>
+			  </div>
+			</div>
+			-->
+			<div style="display:flex;gap:16px;align-items:center;">
+			  <a href="myindex.html" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;">
+				<img src="images/homepage.svg" alt="Home" style="width:24px;height:24px;">
+			  </a>
+			</div>
+		  </div>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<div class="grid-item">
+								<img src="images/UTU/UTU-1.jpg"/>
+								<img src="images/UTU/UTU-2.jpg"/>
+								<img src="images/UTU/UTU-3.jpg"/>
+								<img src="images/UTU/UTU-4.jpg"/>
+							</div>
+							<div class="grid-item">
+								<div class="carousel-container">
+									<div class="carousel-images">
+										<img src="images/UTU/storyboard1.jpg" class="carousel-img active" />
+										<img src="images/UTU/storyboard2.jpg" class="carousel-img" />
+										<img src="images/UTU/storyboard3.jpg" class="carousel-img" />
+										<img src="images/UTU/storyboard4.jpg" class="carousel-img"/>
+										<img src="images/UTU/guideline1.jpg" class="carousel-img"/>
+										<img src="images/UTU/guideline2.jpg" class="carousel-img" />
+										<img src="images/UTU/guideline3.jpg" class="carousel-img" />
+										<img src="images/UTU/guideline4.jpg" class="carousel-img" />
+									</div>
+									<div class="carousel-dots">
+										<span class="dot active"></span>
+										<span class="dot"></span>
+										<span class="dot"></span>
+										<span class="dot"></span>
+										<span class="dot"></span>
+										<span class="dot"></span>
+										<span class="dot"></span>
+										<span class="dot"></span>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item">
+								<img src="images/UTU/UTU-5.jpg"/>
+							</div>
+						</div>
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						
+						<ul class="copyright">
+							<li>&copy; All rights reserved</li><li>Wang Yuqing 2025</a></li>
+						</ul>
+					</div>
+				</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/dropdown.js"></script>
+			<!-- 轮播图 -->
+			<script>
+				document.addEventListener('DOMContentLoaded', function() {
+				  const imgs = document.querySelectorAll('.carousel-img');
+				  const dots = document.querySelectorAll('.carousel-dots .dot');
+				  let current = 0;
+				  let timer = null;
+				
+				  function show(index) {
+					imgs[current].classList.remove('active');
+					dots[current].classList.remove('active');
+					current = index;
+					imgs[current].classList.add('active');
+					dots[current].classList.add('active');
+				  }
+				
+				  dots.forEach((dot, idx) => {
+					dot.addEventListener('click', () => {
+					  show(idx);
+					  resetTimer();
+					});
+				  });
+				
+				  function next() {
+					show((current + 1) % imgs.length);
+				  }
+				
+				  function resetTimer() {
+					if (timer) clearInterval(timer);
+					timer = setInterval(next, 3000);
+				  }
+				
+				  resetTimer();
+				});
+				</script>
+
+
+	</body>
+</html>

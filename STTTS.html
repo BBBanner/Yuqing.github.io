@@ -1,0 +1,256 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>ON-THE-GO ENERGY NEXUS ENERGETIC CAMPUS LIFE</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/dropdown.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<style>
+		#custom-navbar {
+			font-family: monospace !important;
+		}
+		/* 覆盖main.css中的carousel-img样式 */
+		#carousel .carousel-img {
+			opacity: 1 !important;
+			position: absolute !important;
+			left: 0 !important;
+			top: 0 !important;
+			width: 100% !important;
+			height: 100% !important;
+			object-fit: contain !important;
+			transition: opacity 0.3s ease !important;
+			z-index: 1 !important;
+			border-radius: 0 !important;
+			display: none !important; /* 默认隐藏所有图片 */  
+		}
+		#carousel .carousel-img.active {
+			display: block !important; /* 只显示当前活跃的图片 */
+  		}
+		/* 轮播容器宽度70% */
+		#carousel {
+  			width: 100% !important;   /* 让它占满父容器的宽度 */
+  			aspect-ratio: 1057.78/595 !important;
+  			margin: 0 !important;
+  			padding: 0 !important;
+  			border: none !important;
+  			position: relative !important;
+  			background: #f5f5f5 !important;
+		}
+		.carousel-section {
+			border-right: 2px solid #d3d1cd;
+		}
+		.inner {
+			border-bottom: 2px solid #d3d1cd;
+		}
+
+		/* 控制按钮宽度也为100%，跟随轮播容器 */
+		.carousel-controls {
+  			width: 100% !important;
+  			max-width: 100% !important;
+  			display: flex;
+  			justify-content: space-between;
+			align-items: center;
+			margin: 0 auto 0 auto;
+			padding-left: 80px;
+			padding-right: 80px;
+  			padding-top: 24px;
+  			padding-bottom: 24px;
+  			position: relative;
+			border-top: 2px solid #d3d1cd;
+		}
+
+		/* 内容容器样式 */
+		.carousel-text {
+  			flex: 0 0 30%;
+  			max-width: 30%;
+  			margin-right: 10px;	
+		}
+
+  		/* 箭头 */
+  		#prev-arrow, #next-arrow {
+			z-index: 10 !important;
+			border-radius: 0 !important;
+			width: 20px !important;
+			height: 20px !important;
+			display: flex !important;
+			right: 20px !important;
+			bottom: 20px !important;
+			cursor: pointer !important;
+			transition: all 0.3s ease !important;
+			background: none !important;
+			box-shadow: none !important;
+			padding: 0 !important;
+			margin: 0 !important;
+		}
+		#prev-arrow:hover, #next-arrow:hover {
+			transform: scale(1.3) !important;
+		}
+	</style>
+
+	<body class="is-preload">
+		<div id="custom-navbar" style="width:100vw;position:fixed;top:0;left:0;z-index:999;display:flex;justify-content:flex-end;align-items:center;padding:0 32px 0 24px;height:48px;box-sizing:border-box;font-family:monospace;font-size:18px;border-bottom: 2px solid #d3d1cd;">
+			<!--
+			<div style="display:flex;gap:32px;align-items:center;">
+			  <div class="dropdown" style="position:relative;">
+				<span style="cursor:pointer;"><span class="dropdown-arrow">&#x203A;</span> TOPIC</span>
+				<ul class="dropdown-list" style="position:absolute;left:0;top:120%;background:#FBFAF8;list-style:none;padding:8px 0;margin:0;min-width:120px;">
+				  <li style="padding:6px 24px;cursor:pointer;">1</li>
+				  <li style="padding:6px 24px;cursor:pointer;">2</li>
+				  <li style="padding:6px 24px;cursor:pointer;">3</li>
+				</ul>
+			  </div>
+			  <div class="dropdown" style="position:relative;">
+				<span style="cursor:pointer;"><span class="dropdown-arrow">&#x203A;</span> APPROACH</span>
+				<ul class="dropdown-list" style="position:absolute;left:0;top:120%;background:#FBFAF8;list-style:none;padding:8px 0;margin:0;min-width:120px;">
+				  <li style="padding:6px 24px;cursor:pointer;">1</li>
+				  <li style="padding:6px 24px;cursor:pointer;">2</li>
+				  <li style="padding:6px 24px;cursor:pointer;">3</li>
+				</ul>
+			  </div>
+			</div>
+			-->
+			<div style="display:flex;gap:16px;align-items:center;">
+			  <a href="myindex.html" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;">
+				<img src="images/homepage.svg" alt="Home" style="width:24px;height:24px;">
+			  </a>
+			  <!--
+			  <a href="Resume.html" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;">
+				<img src="images/resume.svg" alt="Resume" style="width:24px;height:24px;">
+			  </a>-->
+			</div>
+		  </div>
+					<div class="inner" style="display: flex; flex-direction: row; gap: 40px; align-items: flex-start;">
+						<!-- 左侧图片轮播区 -->
+						<div class="carousel-section" style="flex: 1; max-width: 70%;">
+						  <div id="carousel" style="width: 100%; aspect-ratio: 1057.78/595; background: #eee; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative;">
+							<img class="carousel-img" src="images/STTTS/1.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: block;" />
+							<img class="carousel-img" src="images/STTTS/3.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+							<img class="carousel-img" src="images/STTTS/4.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+							<img class="carousel-img" src="images/STTTS/5.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+							
+							<img class="carousel-img" src="images/STTTS/8.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+							<img class="carousel-img" src="images/STTTS/9.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+							
+							<img class="carousel-img" src="images/STTTS/11.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+							<img class="carousel-img" src="images/STTTS/12.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+							<img class="carousel-img" src="images/STTTS/13.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+							<img class="carousel-img" src="images/STTTS/14.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+							
+							<img class="carousel-img" src="images/STTTS/17.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+							<img class="carousel-img" src="images/STTTS/18.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+							<img class="carousel-img" src="images/STTTS/19.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+							
+							<img class="carousel-img" src="images/STTTS/21.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+							<img class="carousel-img" src="images/STTTS/22.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+							<img class="carousel-img" src="images/STTTS/23.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+							<img class="carousel-img" src="images/STTTS/24.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+							<img class="carousel-img" src="images/STTTS/25.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+							<img class="carousel-img" src="images/STTTS/26.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+							<img class="carousel-img" src="images/STTTS/27.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+							<img class="carousel-img" src="images/STTTS/28.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+							
+							<img class="carousel-img" src="images/STTTS/31.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+							<img class="carousel-img" src="images/STTTS/32.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+							<img class="carousel-img" src="images/STTTS/33.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+							<img class="carousel-img" src="images/STTTS/34.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+							<img class="carousel-img" src="images/STTTS/35.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+							
+							<img class="carousel-img" src="images/STTTS/37.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+							<img class="carousel-img" src="images/STTTS/38.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+							<img class="carousel-img" src="images/STTTS/39.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+							<img class="carousel-img" src="images/STTTS/40.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+							<img class="carousel-img" src="images/STTTS/41.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+							<img class="carousel-img" src="images/STTTS/44.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+							<img class="carousel-img" src="images/STTTS/46.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+							<img class="carousel-img" src="images/STTTS/47.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+							<img class="carousel-img" src="images/STTTS/49.jpg"  style="max-width: 100%; max-height: 100%; object-fit: contain; position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: auto; display: none;" />
+						  </div>
+						  <!-- 轮播控制按钮 -->
+						  <div class="carousel-controls">
+							<span id="prev-arrow">
+								<img src="images/arrow-prev.svg" alt="上一页" ;">
+							</span>
+							<span id="next-arrow">
+								<img src="images/arrow-next.svg" alt="下一页" ;">
+							</span>
+						  </div>
+						</div>
+						<!-- 右侧文字介绍区 -->
+						<div style="flex: 1; max-width: 30%; margin-right: 10px;">
+						  <h1 style="font-size: 2em; margin-top: 2em; margin-bottom: 1em;">Energy transition pathway design for Tongji University campus</h1>
+						  <p style="font-size: 1em; color: #444; line-height: 1.8;">
+							This is a project from my MA course, Socio-Technical Transitions Towards Sustainability at Aalto University.
+						  </p>
+						  <p style="font-size: 1em; color: #444; line-height: 1.8;">
+							In this course, together with other five students, we tried to research and envision the energy transition pathway for Tongji University campus based on the status quo and the policy landscape. 
+							<br>We learnt how to leverage the socio-technical framework and transition arena approach to see the problem at multi-level perspective.
+						</p>
+						</div>
+					  </div>
+
+
+				<!-- Footer -->
+				<footer id="footer">
+					<div class="inner" style="border-bottom: none !important;">
+						<ul class="copyright">
+							<li>&copy; All rights reserved</li><li>Wang Yuqing 2025</a></li>
+						</ul>
+					</div>
+				</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/dropdown.js"></script>
+			<script>
+				// 轮播功能
+				const imgs = document.querySelectorAll('.carousel-img');
+				const nextArrow = document.getElementById('next-arrow');
+				const prevArrow = document.getElementById('prev-arrow');
+				let current = 0;
+			  
+				// 初始化：只显示第一张图片
+				function showImage(index) {
+					// 隐藏所有图片
+					imgs.forEach(img => {
+						img.classList.remove('active');
+					});
+					// 显示当前图片
+					imgs[index].classList.add('active');
+				}
+			  
+				nextArrow.addEventListener('click', function() {
+					current = (current + 1) % imgs.length;
+					showImage(current);
+				});
+			  
+				prevArrow.addEventListener('click', function() {
+					current = (current - 1 + imgs.length) % imgs.length;
+					showImage(current);
+				});
+			  
+				// 初始化显示第一张图片
+				showImage(0);
+				// 添加键盘支持
+				document.addEventListener('keydown', function(e) {
+						if (e.key === 'ArrowRight') {
+							e.preventDefault();
+							nextArrow.click();
+						}
+						if (e.key === 'ArrowLeft') {
+							e.preventDefault();
+							prevArrow.click();
+						}
+					});	
+			</script>
+	</body>
+</html>
