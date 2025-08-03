@@ -3687,14 +3687,14 @@ input, select, textarea {
   /* 新首页样式 */
   .intro-section {
 	background-image: url('../../images/homepageBackground.jpg');
-    background-size: 100% auto;      /* 宽度100%，高度自适应 */
-    background-position: top center;    /* 居中显示 */
+    background-size: 100% auto;      /* 宽度100%，高度自适应，确保宽度填满视窗 */
+    background-position: top;    /* 居中显示 */
 	background-repeat: no-repeat;   /* 不重复 */
 	display: block;
 	position: relative;
   	align-items: center;
 	width: 100%;
-	min-height: 100vh;
+	min-height: 100vh;    /* 确保容器有足够高度显示背景图片 */
 	padding-bottom: 100px;
 	color: #fff;
   }
@@ -3791,7 +3791,7 @@ input, select, textarea {
 @media (max-width: 600px) {
 	.intro-section {
 		padding-bottom: 0px;
-		min-height: 10vh;
+		min-height: 40vh;
 	}
 	.intro-content {
 	  margin-left: 0vw;
@@ -3799,7 +3799,7 @@ input, select, textarea {
 	  padding-bottom: 8px;
 	  padding-left: 8px;
 	  padding-right: 8px;
-	  max-width: 50vw;
+	  max-width: 60vw;
 	  gap: 16px;
 	}
 	.intro-block {
@@ -3809,16 +3809,13 @@ input, select, textarea {
 	  margin-left: 0 !important;
 	}
 	.intro-icon {
-	  width: 16px;
-	  height: 16px;
-	  margin-top: 0;
+	  display: none;
 	}
 	.intro-block p {
-	  font-size: 0.6rem !important;
+	  font-size: 0.8rem !important;
 	}
   }
   
-
 
   
   
@@ -4069,6 +4066,142 @@ body {
   }
   
   
+  /* Projects Section 响应式设计 */
+  @media (max-width: 1200px) {
+	.projects-section {
+	  margin: 30px 0;
+	  padding: 0 0 30px 0;
+	}
+	
+	.year-title {
+	  font-size: 3.5rem;
+	  margin-left: 80px;
+	}
+	
+	.projects-scroll {
+	  padding-left: 200px;
+	  padding-right: 40px;
+	}
+	
+	.project-card {
+	  min-width: 380px;
+	  max-width: 380px;
+	  padding: 28px 28px 28px 28px;
+	}
+	
+	.project-img {
+	  width: 320px;
+	  height: 320px;
+	}
+  }
   
+  @media (max-width: 900px) {
+	.projects-section {
+	  margin: 25px 0;
+	  padding: 0 0 25px 0;
+	}
+	
+	.year-title {
+	  font-size: 3rem;
+	  margin-left: 60px;
+	}
+	
+	.projects-scroll {
+	  padding-left: 150px;
+	  padding-right: 30px;
+	}
+	
+	.project-card {
+	  min-width: 340px;
+	  max-width: 340px;
+	  padding: 24px 24px 24px 24px;
+	}
+	
+	.project-img {
+	  width: 290px;
+	  height: 290px;
+	}
+	
+	.project-title {
+	  font-size: 1.1rem;
+	}
+  }
+  
+  @media (max-width: 600px) {
+	.projects-section {
+	  margin: 20px 0;
+	  padding: 0 0 20px 0;
+	}
+	
+	.year-title {
+	  font-size: 2.5rem;
+	  margin-left: 40px;
+	}
+	
+	.projects-scroll {
+	  padding-left: 100px;
+	  padding-right: 20px;
+	}
+	
+	.project-card {
+	  min-width: 300px;
+	  max-width: 300px;
+	  padding: 20px 20px 20px 20px;
+	}
+	
+	.project-img {
+	  width: 260px;
+	  height: 260px;
+	}
+	
+	.project-title {
+	  font-size: 1rem;
+	}
+	
+	.project-time {
+	  font-size: 0.9rem;
+	}
+	
+	/* 隐藏图标 */
+	.intro-icon {
+	  display: none;
+	}
+  }
+  
+  @media (max-width: 480px) {
+	.projects-section {
+	  margin: 15px 0;
+	  padding: 0 0 15px 0;
+	}
+	
+	.year-title {
+	  font-size: 2rem;
+	  margin-left: 20px;
+	}
+	
+	.projects-scroll {
+	  padding-left: 60px;
+	  padding-right: 15px;
+	}
+	
+	.project-card {
+	  min-width: 260px;
+	  max-width: 260px;
+	  padding: 16px 16px 16px 16px;
+	}
+	
+	.project-img {
+	  width: 220px;
+	  height: 220px;
+	}
+	
+	.project-title {
+	  font-size: 0.9rem;
+	}
+	
+	.project-time {
+	  font-size: 0.8rem;
+	}
+  }
   
   
