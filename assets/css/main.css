@@ -3887,7 +3887,7 @@ body {
 }
 
 .year-title {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 800;
   color: #86B643; /*6ea8fe;*/
   margin-bottom: 0px;
@@ -3895,7 +3895,7 @@ body {
   font-family: 'Poppins', 'Arial', sans-serif;
   letter-spacing: 2px;
   border-bottom: 2px solid #d3d1cd;
-
+  padding-bottom: 10px;
 }
 
 .projects-scroll {
